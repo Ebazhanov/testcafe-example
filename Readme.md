@@ -17,4 +17,6 @@ $ npm run test
 ##### mobile
 $ npm run test:mobile
 
-scan QR-code from console then click on the 'Open link' in your phone
+Read QR-code by your phone then click on the 'Open link' to run the test
+
+[![Watch the video](https://monosnap.com/file/En5ZweISzVnwMtBApkcIQMl1BeJVcx.png)](https://youtu.be/juc1ObcvpD8)

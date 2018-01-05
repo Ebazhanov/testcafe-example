@@ -1,15 +1,15 @@
 import config from '../../config';
-import homePage from '../../page-objects/home-page';
+import HomePage from '../../page-objects/gismeteo/home-page';
 
-const home_page = new homePage();
+const homePage = new HomePage();
 
 fixture `Month forecast`
-    .page `${config.baseUrl}`;
+    .page `${config.gismeteoUrl}`;
 
 test('Weather in Berlin for a month', async t => {
     await t
-        .typeText(home_page.searchField, 'Berlin')
-        .click(home_page.firstCityIntoSearchResult)
-        .click(home_page.monthForecastTab)
-        .expect(home_page.monthTabText.innerText).eql('Weather in Berlin for a month');
+        .typeText(homePage.searchField, 'Berlin')
+        .click(homePage.firstVideoInSearchResult)
+        .click(homePage.monthForecastTab)
+        .expect(homePage.monthTabText.innerText).eql('Weather in Berlin for a month');
 });

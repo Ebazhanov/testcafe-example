@@ -1,7 +1,7 @@
 {
   "name": "testcafe-example",
   "scripts": {
-    "test": "testcafe --skip-js-errors chrome ./tests/*/*.js",
+    "test": "testcafe --skip-js-errors chrome ./tests",
     "test:mobile": "testcafe --skip-js-errors remote ./tests/*/*.js --qr-code"
   },
   "dependencies": {

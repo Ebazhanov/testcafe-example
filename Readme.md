@@ -10,10 +10,9 @@ The purpose of this repo to show some features of TestCafe framework
 
 [Watch the video](http://take.ms/K4qZm)
 
-## Run tests on any mobile devices using QR-code
+#### Run tests on any mobile devices using QR-code
 
-video coming soon
-
+[![Watch the video](https://monosnap.com/file/En5ZweISzVnwMtBApkcIQMl1BeJVcx.png)](https://youtu.be/juc1ObcvpD8)
 
 
 ## Getting started

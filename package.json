@@ -2,7 +2,7 @@
   "name": "testcafe-example",
   "scripts": {
     "test": "testcafe --skip-js-errors chrome ./tests",
-    "test:mobile": "testcafe --skip-js-errors remote ./tests/*/*.js --qr-code"
+    "test:mobile": "testcafe --skip-js-errors remote ./tests/gismeteo/berlin-month-forecast.js --qr-code"
   },
   "dependencies": {
     "testcafe": "^0.18.5"

@@ -1,7 +1,7 @@
 {
   "name": "testcafe-example",
   "scripts": {
-    "test": "testcafe --skip-js-errors chrome ./tests",
+    "test": "testcafe --skip-js-errors firefox ./tests",
     "test:mobile": "testcafe --skip-js-errors remote ./tests/gismeteo/berlin-month-forecast.js --qr-code"
   },
   "dependencies": {

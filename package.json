@@ -1,10 +1,12 @@
 {
   "name": "testcafe-example",
   "scripts": {
-    "test": "testcafe --skip-js-errors firefox ./tests",
+    "test": "node runner.js",
+    "localy": "testcafe --skip-js-errors firefox ./tests",
     "test:mobile": "testcafe --skip-js-errors remote ./tests/gismeteo/berlin-month-forecast.js --qr-code"
   },
   "dependencies": {
+    "glob": "^7.1.2",
     "testcafe": "^0.18.5"
   }
 }

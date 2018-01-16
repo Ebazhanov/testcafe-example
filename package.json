@@ -1,12 +1,17 @@
 {
   "name": "testcafe-example",
   "scripts": {
-    "test": "node runner.js",
+    "test": "testcafe --skip-js-errors firefox ./tests",
+    "runner": "node runner.js -r xunit:/tmp/test-results/res.xml",
     "localy": "testcafe --skip-js-errors firefox ./tests",
     "test:mobile": "testcafe --skip-js-errors remote ./tests/gismeteo/berlin-month-forecast.js --qr-code"
   },
   "dependencies": {
     "glob": "^7.1.2",
     "testcafe": "^0.18.5"
+  },
+  "devDependencies": {
+    "testcafe": "^0.18.4",
+    "testcafe-reporter-xunit": "^2.1.0"
   }
 }

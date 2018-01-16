@@ -46,7 +46,7 @@ const runTest = suite => {
 };
 
 const suites = {
-  suite1: './tests/*/*.js',
+  suite: './tests/*/*.js',
 };
 
-runTest(suites.suite1);
+runTest(suites.suite);

@@ -23,26 +23,30 @@ const runOptions = {
 };
 
 const runTest = suite => {
-  createTestCafe('localhost', 1337, 1338)
-    .then(tc => {
-      testcafe = tc;
-      runner = testcafe.createRunner();
-      runner.screenshots('reports/screenshots/', true);
-    })
-    .then(() => {
-      return getTests(suite);
-    })
-    .then(testFiles => {
-      runner
-        .src(testFiles)
-        .browsers('firefox')
-        .concurrency(3)
-        .run(runOptions)
-        .then(failedCount => {
-          console.log(failedCount);
-          testcafe.close();
-        });
-    });
+    let failedCount = 0;
+
+    createTestCafe('localhost', 1337, 1338)
+        .then(tc => {
+            testcafe = tc;
+            runner = testcafe.createRunner();
+            runner.screenshots('reports/screenshots/', true);
+        })
+        .then(() => {
+            return getTests(suite);
+        })
+        .then(testFiles => {
+            return runner
+                .src(testFiles)
+                .browsers('firefox')
+                .concurrency(2)
+                .run(runOptions)
+                .then(actualFailedCount => {
+                    failedCount = actualFailedCount;
+                    console.log(failedCount);
+                    return testcafe.close();
+                });
+        })
+        .then(() => process.exit(failedCount));
 };
 
 const suites = {

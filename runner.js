@@ -37,8 +37,9 @@ const runTest = suite => {
         .then(testFiles => {
             return runner
                 .src(testFiles)
-                .browsers('firefox')
-                .concurrency(2)
+                // .browsers('chrome:headless')
+                .browsers('saucelabs:Android Emulator Phone@6.0')
+                .concurrency(1)
                 .run(runOptions)
                 .then(actualFailedCount => {
                     failedCount = actualFailedCount;

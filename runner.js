@@ -5,27 +5,27 @@ let runner = null;
 let testcafe = null;
 
 const getTests = suite => {
-  return new Promise(resolve => {
-    glob(suite, (er, files) => resolve(files));
-  });
+    return new Promise(resolve => {
+        glob(suite, (er, files) => resolve(files));
+    });
 };
 
 const runOptions = {
-  debug: true,
-  skipJsErrors: true,
-  quarantineMode: false,
-  startFullscreen: true,
-  selectorTimeout: 30000,
-  assertionTimeout: 17000,
-  pageLoadTimeout: 140000,
-  inspect: true,
-  speed: 1,
+    debug: true,
+    skipJsErrors: true,
+    quarantineMode: false,
+    startFullscreen: true,
+    selectorTimeout: 30000,
+    assertionTimeout: 17000,
+    pageLoadTimeout: 140000,
+    inspect: true,
+    speed: 1,
 };
 
 const runTest = suite => {
     let failedCount = 0;
 
-    createTestCafe('localhost', 1337, 1338)
+    createTestCafe('127.0.0.1', 1337, 1338)
         .then(tc => {
             testcafe = tc;
             runner = testcafe.createRunner();
@@ -37,8 +37,7 @@ const runTest = suite => {
         .then(testFiles => {
             return runner
                 .src(testFiles)
-                // .browsers('chrome:headless')
-                .browsers('saucelabs:Android Emulator Phone@6.0')
+                .browsers([ 'browserstack:iPhone 7 Plus', 'browserstack:Samsung Galaxy S7' ])
                 .concurrency(1)
                 .run(runOptions)
                 .then(actualFailedCount => {
@@ -51,7 +50,7 @@ const runTest = suite => {
 };
 
 const suites = {
-  suite: './tests/*/*.js',
+    suite: './tests/*/*.js',
 };
 
 runTest(suites.suite);

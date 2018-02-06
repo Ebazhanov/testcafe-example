@@ -25,7 +25,7 @@ const runOptions = {
 const runTest = suite => {
     let failedCount = 0;
 
-    createTestCafe('localhost', 1337, 1338)
+    createTestCafe('127.0.0.1', 1337, 1338)
         .then(tc => {
             testcafe = tc;
             runner = testcafe.createRunner();
@@ -37,8 +37,7 @@ const runTest = suite => {
         .then(testFiles => {
             return runner
                 .src(testFiles)
-                // .browsers('chrome:headless')
-                .browsers('saucelabs:Android Emulator Phone@6.0')
+                .browsers([ 'browserstack:iPhone 7 Plus', 'browserstack:Samsung Galaxy S7' ])
                 .concurrency(1)
                 .run(runOptions)
                 .then(actualFailedCount => {

@@ -25,7 +25,7 @@ const runOptions = {
 const runTest = suite => {
     let failedCount = 0;
 
-    createTestCafe('127.0.0.1', 1337, 1338)
+    createTestCafe(null, 1337, 1338)
         .then(tc => {
             testcafe = tc;
             runner = testcafe.createRunner();
@@ -37,7 +37,7 @@ const runTest = suite => {
         .then(testFiles => {
             return runner
                 .src(testFiles)
-                .browsers([ 'browserstack:iPhone 7 Plus', 'browserstack:Samsung Galaxy S7' ])
+                .browsers('browserstack:iPhone 7 Plus@10.3')
                 .concurrency(1)
                 .run(runOptions)
                 .then(actualFailedCount => {
@@ -50,7 +50,7 @@ const runTest = suite => {
 };
 
 const suites = {
-    suite: './tests/*/*.js',
+    suite: './tests/mycs/table.js',
 };
 
 runTest(suites.suite);

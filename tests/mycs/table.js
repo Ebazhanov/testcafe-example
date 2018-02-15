@@ -1,12 +1,12 @@
 import config from '../../config';
-import HomePage from '../../page-objects/mycs/home-page';
+import TablePage from '../../page-objects/mycs/home-page';
 
-const homePage = new HomePage();
+const tablePage = new TablePage();
 
 fixture `Table`
-    .page `${config.tableUrl}`;
+    .page `${config.tableUrl}/tisch/Fir7tqo7e?tab=farben`;
 
 test('Navigate to table page', async t => {
     await t
-        .click(homePage.searchField)
+        .click(tablePage.thirdButton)
 });

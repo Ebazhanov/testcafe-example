@@ -15,11 +15,11 @@ const runOptions = {
     skipJsErrors: true,
     quarantineMode: false,
     startFullscreen: true,
-    selectorTimeout: 30000,
-    assertionTimeout: 17000,
-    pageLoadTimeout: 140000,
+    selectorTimeout: 95000,
+    assertionTimeout: 25000,
+    pageLoadTimeout: 190000,
     inspect: true,
-    speed: 1,
+    speed: 1
 };
 
 const runTest = suite => {
@@ -38,7 +38,6 @@ const runTest = suite => {
             return runner
                 .src(testFiles)
                 .browsers('browserstack:iPhone 7 Plus@10.3')
-                .concurrency(1)
                 .run(runOptions)
                 .then(actualFailedCount => {
                     failedCount = actualFailedCount;
@@ -50,7 +49,7 @@ const runTest = suite => {
 };
 
 const suites = {
-    suite: './tests/mycs/table.js',
+    mobile: './tests/mycs/table.js'
 };
 
-runTest(suites.suite);
+runTest(suites.mobile);

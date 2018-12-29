@@ -37,7 +37,7 @@ const runTest = suite => {
         .then(testFiles => {
             return runner
                 .src(testFiles)
-                .browsers('browserstack:iPhone 7 Plus@10.3')
+                .browsers('chrome')
                 .run(runOptions)
                 .then(actualFailedCount => {
                     failedCount = actualFailedCount;
@@ -49,7 +49,7 @@ const runTest = suite => {
 };
 
 const suites = {
-    mobile: './tests/mycs/table.js'
+    mobile: './tests/check24/*.js'
 };
 
 runTest(suites.mobile);

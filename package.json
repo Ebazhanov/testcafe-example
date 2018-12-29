@@ -1,13 +1,11 @@
 {
   "name": "testcafe-example",
   "scripts": {
-    "test": "node runner.js -r xunit:/tmp/test-results/res.xml",
-    "localy": "testcafe --skip-js-errors firefox ./tests/check24/search-for-credit.js",
-    "test:mobile": "testcafe --skip-js-errors remote ./tests/gismeteo/berlin-month-forecast.js --qr-code"
+    "localy": "node runner.js",
+    "mobile": "testcafe --skip-js-errors remote ./tests/gismeteo/berlin-month-forecast.js --qr-code"
   },
   "dependencies": {
-    "glob": "^7.1.2",
-    "testcafe": "^0.18.6",
-    "testcafe-browser-provider-browserstack": "^1.2.0"
+    "glob": "^7.1.3",
+    "testcafe": "^0.23.3"
   }
 }

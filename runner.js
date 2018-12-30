@@ -37,7 +37,8 @@ const runTest = suite => {
         .then(testFiles => {
             return runner
                 .src(testFiles)
-                .browsers('chrome')
+                //.browsers('chromcleae:headless','safari','firefox')
+                .browsers('chrome', 'safari', 'firefox', 'chromium')
                 .run(runOptions)
                 .then(actualFailedCount => {
                     failedCount = actualFailedCount;
@@ -49,7 +50,7 @@ const runTest = suite => {
 };
 
 const suites = {
-    mobile: './tests/check24/*.js'
+    mobile: './tests/desktop/*.js'
 };
 
 runTest(suites.mobile);

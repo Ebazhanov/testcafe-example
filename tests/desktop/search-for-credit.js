@@ -3,10 +3,10 @@ import MainPage from '../../page-objects/check24/main-page';
 
 const mainPage = new MainPage();
 
-fixture `Check 24 search`
-    .page `${config.check24Url}`;
+fixture`Check 24 search`
+    .page`${config.check24Url}`;
 
-test('Search for ...', async t => {
+test('Search for credit', async t => {
     await t
         .typeText(mainPage.searchField, 'Credit')
         .click(mainPage.firstVideoInSearchResult)

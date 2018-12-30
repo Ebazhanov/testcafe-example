@@ -1,8 +1,8 @@
 {
   "name": "testcafe-example",
   "scripts": {
-    "localy": "node runner.js",
-    "mobile": "testcafe --skip-js-errors remote ./tests/gismeteo/berlin-month-forecast.js --qr-code"
+    "locally": "node runner.js",
+    "mobile": "testcafe --skip-js-errors remote ./tests/mobile/*.js --qr-code"
   },
   "dependencies": {
     "glob": "^7.1.3",

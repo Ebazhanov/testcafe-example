@@ -1,25 +1,22 @@
-# testcafe-example
+## testcafe-example
 
-
-The purpose of this repo to show some features of TestCafe framework
-
-#### Run different tests at the same browser
-
-[Watch the video](http://take.ms/K4qZm)
-
-#### Run tests on real mobile by reading QR-code
-
-[Watch the video](https://youtu.be/juc1ObcvpD8)
-
+Motivation: 
+- run test in different browsers Chrome/Safari/FF/Chromium
+- run all tests at the same browser without close/open new browser
+- run on physical mobile devices without cable connection
+- run in cloud services like browserstack
+- run in docker
 
 ### Getting started
 `npm install`
 
 ## How to run test
-##### locally 
-`$ npm run test`
+##### Locally 
+`$ npm run locally`
 
-##### mobile
-`$ npm run test:mobile`
+[video](https://monosnap.com/file/N0y3NgnhkCI6LRlMjxe5zP9NNLIJ2Q#)
+
+##### On mobile with QR-code
+`$ npm run mobile`
 
 Read QR-code by your phone then click on the `Open link` to run the test

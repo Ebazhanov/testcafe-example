@@ -37,8 +37,8 @@ const runTest = suite => {
         .then(testFiles => {
             return runner
                 .src(testFiles)
-                //.browsers('chromcleae:headless')
-                .browsers('chrome', 'safari', 'firefox', 'chromium')
+                .browsers('chrome:headless')
+                //.browsers('chrome', 'safari', 'firefox', 'chromium')
                 .run(runOptions)
                 .then(actualFailedCount => {
                     failedCount = actualFailedCount;

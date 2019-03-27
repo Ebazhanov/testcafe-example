@@ -8,7 +8,7 @@ Motivation:
 - [x] run all tests at the same browser without close/open new browser
 - [x] run on physical mobile devices without cable connection [by QR-Code](https://devexpress.github.io/testcafe/documentation/recipes/test-on-remote-computers-and-mobile-devices.html#run-tests-on-a-mobile-device)
 - [x] run in cloud services like [Browserstack](https://devexpress.github.io/testcafe/documentation/using-testcafe/common-concepts/browsers/browser-support.html#browsers-in-cloud-testing-services)
-- [ ] run in [docker](https://devexpress.github.io/testcafe/documentation/continuous-integration/gitlab.html#option-1---use-testcafe-docker-image)
+- [x] run in [docker](https://devexpress.github.io/testcafe/documentation/continuous-integration/gitlab.html#option-1---use-testcafe-docker-image)
 
 ### Getting started
 `npm install`
@@ -23,3 +23,14 @@ Motivation:
 `$ npm run mobile`
 
 Read QR-code by your phone then click on the `Open link` to run the test
+
+##### Run in docker
+
+```
+docker pull testcafe/testcafe:latest
+```
+```
+npm run docker
+```
+- TIP's to understand docker commands [link1](https://www.javascriptjanuary.com/blog/building-your-first-node-app-using-docker),
+[link2](https://hub.docker.com/r/hortonworks/cloud-web-testcafe)

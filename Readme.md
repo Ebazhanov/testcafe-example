@@ -1,6 +1,7 @@
 ## testcafe-example
 
 Motivation:
+-----------
 
 (done/in progress)
 
@@ -10,12 +11,16 @@ Motivation:
 - [x] run in cloud services like [Browserstack](https://devexpress.github.io/testcafe/documentation/using-testcafe/common-concepts/browsers/browser-support.html#browsers-in-cloud-testing-services)
 - [x] run in [docker](https://devexpress.github.io/testcafe/documentation/continuous-integration/gitlab.html#option-1---use-testcafe-docker-image)
 
+Build status | Description | YML
+:--- | :--- | :---
+[![CircleCI](https://circleci.com/gh/Ebazhanov/testcafe-example.svg?style=svg)](https://circleci.com/gh/Ebazhanov/testcafe-example) | Linux (CircleCI) | [circle.yml](circle.yml)
+
 ### Getting started
 `npm install`
 
 ## How to run test
 ##### Locally 
-`$ npm run locally`
+`$ npm run test`
 
 [my video](https://monosnap.com/file/N0y3NgnhkCI6LRlMjxe5zP9NNLIJ2Q#)
 

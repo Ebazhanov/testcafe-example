@@ -16,7 +16,7 @@ Build status | Description | YML
 [![CircleCI](https://circleci.com/gh/Ebazhanov/testcafe-example.svg?style=svg)](https://circleci.com/gh/Ebazhanov/testcafe-example) | Linux (CircleCI) | [circle.yml](circle.yml)
 
 ### Getting started
-`npm install`
+`$ npm install`
 
 ## How to run test
 ##### Locally 
@@ -32,10 +32,13 @@ Read QR-code by your phone then click on the `Open link` to run the test
 ##### Run in docker
 
 ```
-docker pull testcafe/testcafe:latest
+$ docker pull testcafe/testcafe:latest
 ```
 ```
-npm run docker
+$ npm run docker
 ```
-- TIP's to understand docker commands [link1](https://www.javascriptjanuary.com/blog/building-your-first-node-app-using-docker),
-[link2](https://hub.docker.com/r/hortonworks/cloud-web-testcafe)
+
+## More info: 
+- [Basic things Docker](https://www.javascriptjanuary.com/blog/building-your-first-node-app-using-docker),
+- [TestCafe Docker](https://hub.docker.com/r/hortonworks/cloud-web-testcafe)
+

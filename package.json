@@ -1,8 +1,9 @@
 {
   "name": "testcafe-example",
   "scripts": {
-    "locally": "node runner.js",
-    "mobile": "testcafe --skip-js-errors remote ./tests/mobile/*.js --qr-code"
+    "test": "node runner.js",
+    "mobile": "testcafe --skip-js-errors remote ./tests/mobile/*.js --qr-code",
+    "docker": "docker run -it --rm -v `pwd`:/app -w /app testcafe/testcafe:latest 'chromium --no-sandbox,firefox' tests/desktop/testcafe-forum.js"
   },
   "dependencies": {
     "glob": "^7.1.3",
